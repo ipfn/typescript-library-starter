@@ -19,6 +19,7 @@ const rmFiles = [
   "tools/init.ts"
 ]
 const modifyFiles = [
+  "README.md",
   "LICENSE",
   "package.json",
   "rollup.config.ts",
@@ -26,7 +27,6 @@ const modifyFiles = [
   "tools/gh-pages-publish.ts"
 ]
 const renameFiles = [
-  ["src/library.ts", "src/--libraryname--.ts"],
   ["test/library.test.ts", "test/--libraryname--.test.ts"]
 ]
 
@@ -40,7 +40,7 @@ const _promptSchemaLibraryName = {
       type: "string",
       required: true,
       message:
-        '"kebab-case" uses lowercase letters, and hyphens for any punctuation'
+      '"kebab-case" uses lowercase letters, and hyphens for any punctuation'
     }
   }
 }
@@ -50,8 +50,8 @@ const _promptSchemaLibrarySuggest = {
     useSuggestedName: {
       description: colors.cyan(
         'Would you like it to be called "' +
-          libraryNameSuggested() +
-          '"? [Yes/No]'
+        libraryNameSuggested() +
+        '"? [Yes/No]'
       ),
       pattern: /^(y(es)?|n(o)?)$/i,
       type: "string",
@@ -236,7 +236,7 @@ function modifyContents(libraryName: string, username: string, usermail: string)
 function renameItems(libraryName: string) {
   console.log(colors.underline.white("Renamed"))
 
-  renameFiles.forEach(function(files) {
+  renameFiles.forEach(function (files) {
     // Files[0] is the current filename
     // Files[1] is the new name
     let newFilename = files[1].replace(/--libraryname--/g, libraryName)
