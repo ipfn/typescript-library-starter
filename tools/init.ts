@@ -11,12 +11,12 @@ const { fork } = require("child_process")
 
 // Note: These should all be relative to the project root directory
 const rmDirs = [
-  ".git"
+  ".git",
+  "tools"
 ]
 const rmFiles = [
   ".all-contributorsrc",
-  ".gitattributes",
-  "tools/init.ts"
+  ".gitattributes"
 ]
 const modifyFiles = [
   "README.md",
