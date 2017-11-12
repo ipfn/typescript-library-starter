@@ -2,7 +2,7 @@
  * @license Apache-2.0
  */
 import 'jest';
-import DummyClass from '../src'
+import DummyClass from '../src/index'
 
 /**
  * Dummy test
