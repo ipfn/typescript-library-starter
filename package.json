@@ -29,7 +29,6 @@
     "test:watch": "jest --watch",
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "commit": "git-cz",
     "precommit": "lint-staged",
     "postinstall": "ts-node tools/init"
   },
@@ -38,15 +37,6 @@
       "prettier --write --no-semi --single-quote",
       "git add"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": "conventional-commit-types",
-      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
-    }
   },
   "jest": {
     "transform": {
@@ -77,11 +67,8 @@
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
     "colors": "^1.1.2",
-    "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
     "cross-env": "^5.0.1",
-    "cz-conventional-changelog": "^2.0.0",
-    "husky": "^0.14.0",
     "jest": "^21.0.0",
     "lint-staged": "^4.0.0",
     "lodash.camelcase": "^4.3.0",
@@ -95,7 +82,6 @@
     "tslint-config-prettier": "^1.1.0",
     "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.9.0",
-    "typescript": "^2.3.4",
-    "validate-commit-msg": "^2.12.2"
+    "typescript": "^2.3.4"
   }
 }
