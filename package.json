@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && && typedoc --out dist/docs --target es6 --theme minimal src",
+    "build": "tsc && typedoc --out dist/docs --target es6 --theme minimal src",
     "start": "tsc -w",
     "test": "jest",
     "test:watch": "jest --watch",
