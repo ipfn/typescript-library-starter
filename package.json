@@ -29,14 +29,7 @@
     "test:watch": "jest --watch",
     "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
-    "precommit": "lint-staged",
     "postinstall": "ts-node tools/init"
-  },
-  "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "prettier --write --no-semi --single-quote",
-      "git add"
-    ]
   },
   "jest": {
     "transform": {
@@ -70,7 +63,6 @@
     "coveralls": "^3.0.0",
     "cross-env": "^5.0.1",
     "jest": "^21.0.0",
-    "lint-staged": "^4.0.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
